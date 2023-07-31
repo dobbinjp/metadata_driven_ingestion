@@ -1,0 +1,22 @@
+--add the below code to "When a HTTP request is received" to alert/email on activity run status
+
+{
+    "properties": {
+        "DataFactoryName": {
+            "type": "string"
+        },
+        "EmailTo": {
+            "type": "string"
+        },
+        "ErrorMessage": {
+            "type": "string"
+        },
+        "PipelineName": {
+            "type": "string"
+        },
+        "PipelineStatus": {
+            "type": "string"
+        }
+    },
+    "type": "object"
+}
