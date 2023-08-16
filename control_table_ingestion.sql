@@ -2,7 +2,7 @@ SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE TABLE [dbo].[ControlTable_Ingest](
+CREATE TABLE [etl].[ControlTable_Ingest](
 	[ControlTable_IngestId] [int] IDENTITY(1,1) NOT NULL,
 	[PipelineTriggerName] [varchar](200) NULL,
 	[PipelineLastRunDateTimeUTC] [varchar](50) NULL,
