@@ -2,6 +2,8 @@ SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
+--note that this table is created in the 'etl' schema (this is the table referenced and updated in the pipeline)
+--you will need to either create the etl schema, or change this and the pipeline reference to whichever schema you use
 CREATE TABLE [etl].[ControlTable_Ingest](
 	[ControlTable_IngestId] [int] IDENTITY(1,1) NOT NULL,
 	[PipelineTriggerName] [varchar](200) NULL,
