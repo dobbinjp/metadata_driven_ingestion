@@ -17,7 +17,7 @@ CREATE TABLE [etl].[ControlTable_Ingest](
 	[SourceDataLakeFolder] [varchar](100) NULL,
 	[SourceDataLakeFile] [varchar](100) NULL,
 	[SourceKeyColumnList] [varchar](4000) NULL,
-	[SourceExtractMethod] [varchar](20) NULL, --can be either FULL, SQL, or DELTA
+	[SourceExtractMethod] [varchar](20) NULL,
 	[SourceExtractSQL] [varchar](max) NULL,
 	[DeltaCreateWatermarkColumnName] [varchar](50) NULL,
 	[DeltaUpdateWatermarkColumnName] [varchar](50) NULL,
