@@ -9,10 +9,10 @@ CREATE TABLE [etl].[ControlTable_Ingest](
 	[PipelineTriggerName] [varchar](200) NULL,
 	[PipelineLastRunDateTimeUTC] [varchar](50) NULL,
 	[DataSourceName] [varchar](100) NULL,
-	[SourceServerName] [varchar](100) NULL,
-	[SourceDatabaseName] [varchar](100) NULL,
-	[SourceSchemaName] [varchar](50) NULL,
-	[SourceTableName] [varchar](100) NULL,
+	[SourceDBServerName] [varchar](100) NULL,
+	[SourceDBName] [varchar](100) NULL,
+	[SourceDBSchemaName] [varchar](50) NULL,
+	[SourceDBTableName] [varchar](100) NULL,
 	[SourceDataLakeContainer] [varchar](100) NULL,
 	[SourceDataLakeFolder] [varchar](100) NULL,
 	[SourceDataLakeFile] [varchar](100) NULL,
@@ -25,6 +25,7 @@ CREATE TABLE [etl].[ControlTable_Ingest](
 	[TargetDataLakeContainer] [varchar](100) NULL,
 	[TargetDataLakeFolder] [varchar](300) NULL,
 	[TargetDataLakeFile] [varchar](300) NULL,
+	[TargetDBServerName] [varchar](50) NULL,
 	[TargetDBName] [varchar](50) NULL,
 	[TargetDBSchemaName] [varchar](50) NULL,
 	[TargetDBTableName] [varchar](200) NULL,
@@ -41,3 +42,4 @@ ALTER TABLE [etl].[ControlTable_Ingest] ADD  CONSTRAINT [PK_ControlTable] PRIMAR
 GO
 ALTER TABLE [etl].[ControlTable_Ingest] ADD  CONSTRAINT [DF_ControlTable_Ingest_IsActiveFlag]  DEFAULT ((0)) FOR [IsActiveFlag]
 GO
+
